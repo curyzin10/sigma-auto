@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Sigma - Sistema de Controle</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <header>
+      <img src="img/redesigma.png" alt="Logomarca" class="logo">
+        <h1>Rede Sigma - Sistema de Controle de Veículos</h1>
+        
+        <nav>
+            <a href="#veiculos">Veículos</a>
+            <a href="#clientes">Clientes</a>
+            <a href="#vendedores">Vendedores</a>
+            <a href="#montadoras">Montadoras</a>
+            <a href="#operacoes">Operações</a>
+        </nav>
+    </header>
+    
+
+    <!-- Seção de Carros -->
+<section class="container mt-5">
+  <h2 class="text-center mb-4">Carros Disponíveis</h2>
+
+  <!-- Adicionando uma div.row ao redor dos carros -->
+  <div class="row">
+      <!-- Carro 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+              <img src="img/mercedes1.jpg" class="card-img-top" alt="Mercedes C200">
+              <div class="card-body">
+                  <h5 class="card-title">Mercedes C200</h5>
+                  <p class="card-text">Preço: R$ 199.990</p>
+                  <a href="carro1.html" class="btn btn-custom">Ver Detalhes</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Carro 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+              <img src="img/bmwserie4.jpg" class="card-img-top" alt="BMW">
+              <div class="card-body">
+                  <h5 class="card-title">BMW</h5>
+                  <p class="card-text">Preço: R$ 179.990</p>
+                  <a href="carro2.html" class="btn btn-custom">Ver Detalhes</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Carro 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+              <img src="img/ferrari488.jpg" class="card-img-top" alt="Ferrari">
+              <div class="card-body">
+                  <h5 class="card-title">Ferrari</h5>
+                  <p class="card-text">Preço: R$ 2.250.990</p>
+                  <a href="carro3.html" class="btn btn-custom">Ver Detalhes</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Carro 4 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+              <img src="img/hrv.jpg" class="card-img-top" alt="Audi R8">
+              <div class="card-body">
+                  <h5 class="card-title">Honda HRV</h5>
+                  <p class="card-text">Preço: R$ 119.990</p>
+                  <a href="carro4.html" class="btn btn-custom">Ver Detalhes</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Carro 5 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+              <img src="img/versa.jpg" class="card-img-top" alt="Porsche">
+              <div class="card-body">
+                  <h5 class="card-title">Nissan Versa</h5>
+                  <p class="card-text">Preço: R$ 109.990</p>
+                  <a href="carro5.html" class="btn btn-custom">Ver Detalhes</a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Carro 6 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+            <img src="img/corvette.webp" class="card-img-top" alt="Corvette">
+            <div class="card-body">
+                <h5 class="card-title">Corvette</h5>
+                <p class="card-text">Preço: R$ 549.990</p>
+                <a href="carro5.html" class="btn btn-custom">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+</div> <!-- Fim da div.row -->
+</section>
+  
+
+
+
+
+
+
+
+
+<!-- Formulário para adicionar veículo -->
+<section id="veiculos">
+  <h2>Adicionar veículo</h2>
+  <form id="vehicle-form" action="add_vehicle.php" method="POST">
+    <!-- Campos do formulário -->
+    <input type="text" name="chassi" placeholder="Número do Chassi" required>
+    <input type="text" name="placa" placeholder="Placa" required>
+    <input type="text" name="marca" placeholder="Marca" required>
+    <input type="text" name="modelo" placeholder="Modelo" required>
+    <input type="text" name="ano_fabricacao" placeholder="Ano de Fabricação" required>
+    <input type="text" name="ano_modelo" placeholder="Ano do Modelo" required>
+    <input type="text" name="cor" placeholder="Cor" required>
+    <input type="text" name="preco" placeholder="Valor" required>
+    <button type="submit">Adicionar Veículo</button>
+  </form>
+</section>
+
+
+
+
+
+<!-- Seção de Clientes -->
+<section id="clientes">
+    <h2>Controle de Clientes</h2>
+    <form id="add-client-form" action="add_client.php" method="POST">
+        <input type="text" id="client-cpf" placeholder="CPF">
+        <input type="text" id="client-name" placeholder="Nome">
+        <input type="text" id="client-address" placeholder="Endereço">
+        <input type="text" id="client-city" placeholder="Cidade">
+        <input type="text" id="client-state" placeholder="Estado">
+        <input type="text" id="client-phone" placeholder="Telefone Residencial">
+        <input type="text" id="client-cell" placeholder="Celular">
+        <input type="text" id="client-income" placeholder="Renda">
+        <button onclick="addClient()">Adicionar Cliente</button>
+    </form>
+    <ul id="client-list"></ul>
+</section>
+
+
+    <!-- Seção de Vendedores -->
+<section id="vendedores">
+    <h2>Controle de Vendedores</h2>
+    <form id="add-seller-form" action="add_seller.php" method="POST">
+        <input type="text" id="seller-code" placeholder="Código">
+        <input type="text" id="seller-user" placeholder="Usuário">
+        <button onclick="addSeller()">Adicionar Vendedor</button>
+    </form>
+    <ul id="seller-list"></ul>
+</section>
+
+
+    <!-- Seção de Montadoras -->
+<section id="montadoras">
+    <h2>Controle de Montadoras</h2>
+      <form id="add-manufacturer-form" action="add_manufacturer.php" method="POST">
+        <input type="text" id="manufacturer-cnpj" placeholder="CNPJ">
+        <input type="text" id="manufacturer-razao" placeholder="Razão Social">
+        <input type="text" id="manufacturer-marca" placeholder="Marca">
+        <input type="text" id="manufacturer-contato" placeholder="Contato">
+        <input type="text" id="manufacturer-tel" placeholder="Telefone Comercial">
+        <input type="text" id="manufacturer-cel" placeholder="Celular">
+        <button onclick="addManufacturer()">Adicionar Montadora</button>
+      </form>
+    <ul id="manufacturer-list"></ul>
+</section>
+
+
+    <!-- Seção de Operações -->
+<section id="operacoes">
+    <h2>Controle de Operações</h2>
+      <form id="add-manufacturer-form" action="add_manufacturer.php" method="POST"></form>
+        <input type="text" id="operation-type" placeholder="Tipo (compra/venda)">
+        <input type="text" id="operation-client" placeholder="ID do Cliente">
+        <input type="text" id="operation-vehicle" placeholder="ID do Veículo">
+        <input type="text" id="operation-seller" placeholder="ID do Vendedor">
+        <input type="text" id="operation-value" placeholder="Valor">
+        <button onclick="addOperation()">Adicionar Operação</button>
+      </form>
+    <ul id="operation-list"></ul>
+</section>
+    <script src="js/script.js"></script>
+</body>
+
+<div id="message-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h3 id="modal-title">Título da Operação</h3>
+      <p id="modal-message">Mensagem da operação</p>
+  </div>
+</div>
+
+
+<!-- Modal inserido diretamente no HTML -->
+<div id="message-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h3 id="modal-title">Título da Operação</h3>
+      <p id="modal-message">Mensagem da operação</p>
+  </div>
+</div>
+
+
+<!-- Script JS -->
+<script src="js/modalHandler.js"></script>
+
+</html>
